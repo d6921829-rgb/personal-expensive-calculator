@@ -1,0 +1,300 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Personal Expense Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <div>
+                <p class="tag">MY MONEY SPACE</p>
+
+                <h1>Personal Expense Calculator</h1>
+
+                <p class="subtitle">
+                    Track your money • Plan your spending • Save better
+                </p>
+            </div>
+
+            <div class="money-icon">
+                ₹
+            </div>
+        </header>
+
+
+        <!-- SUMMARY -->
+
+        <section class="dashboard">
+
+            <div class="stat income">
+                <p>Monthly Income</p>
+                <h2>₹<span id="incomeDisplay">0</span></h2>
+            </div>
+
+            <div class="stat expenses">
+                <p>Total Expenses</p>
+                <h2>₹<span id="expenseDisplay">0</span></h2>
+            </div>
+
+            <div class="stat savings">
+                <p>Available Balance</p>
+                <h2>₹<span id="balanceDisplay">0</span></h2>
+            </div>
+
+        </section>
+
+
+        <!-- MAIN AREA -->
+
+        <section class="content">
+
+            <!-- ADD EXPENSE -->
+
+            <div class="card">
+
+                <h2>Add Expense</h2>
+
+                <p class="description">
+                    Record your daily spending
+                </p>
+
+
+                <label for="income">
+                    Monthly Income
+                </label>
+
+                <input
+                    type="number"
+                    id="income"
+                    placeholder="Enter your income"
+                >
+
+
+                <label for="expenseName">
+                    Expense Name
+                </label>
+
+                <input
+                    type="text"
+                    id="expenseName"
+                    placeholder="Example: Lunch"
+                >
+
+
+                <label for="expenseAmount">
+                    Amount
+                </label>
+
+                <input
+                    type="number"
+                    id="expenseAmount"
+                    placeholder="Enter amount"
+                >
+
+
+                <label for="category">
+                    Category
+                </label>
+
+                <select id="category">
+
+                    <option value="Food">
+                        🍔 Food
+                    </option>
+
+                    <option value="Travel">
+                        🚗 Travel
+                    </option>
+
+                    <option value="Shopping">
+                        🛍️ Shopping
+                    </option>
+
+                    <option value="Bills">
+                        💡 Bills
+                    </option>
+
+                    <option value="Education">
+                        📚 Education
+                    </option>
+
+                    <option value="Other">
+                        📦 Other
+                    </option>
+
+                </select>
+
+
+                <button onclick="addExpense()">
+                    + Add Expense
+                </button>
+
+            </div>
+
+
+            <!-- EXPENSE LIST -->
+
+            <div class="card">
+
+                <div class="title-row">
+
+                    <div>
+                        <h2>Recent Expenses</h2>
+
+                        <p class="description">
+                            Your spending history
+                        </p>
+                    </div>
+
+                    <span id="expenseCount">
+                        0 items
+                    </span>
+
+                </div>
+
+
+                <div id="expenseList">
+
+                    <div class="empty">
+
+                        <div>🧾</div>
+
+                        <h3>No expenses yet</h3>
+
+                        <p>
+                            Add your first expense to see it here.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SPENDING OVERVIEW -->
+
+        <section class="card overview">
+
+            <h2>Spending Overview</h2>
+
+            <p class="description">
+                See where your money is going
+            </p>
+
+
+            <div class="category">
+
+                <span>🍔 Food</span>
+
+                <div class="progress">
+                    <div id="foodBar"></div>
+                </div>
+
+                <b id="foodAmount">
+                    ₹0
+                </b>
+
+            </div>
+
+
+            <div class="category">
+
+                <span>🚗 Travel</span>
+
+                <div class="progress">
+                    <div id="travelBar"></div>
+                </div>
+
+                <b id="travelAmount">
+                    ₹0
+                </b>
+
+            </div>
+
+
+            <div class="category">
+
+                <span>🛍️ Shopping</span>
+
+                <div class="progress">
+                    <div id="shoppingBar"></div>
+                </div>
+
+                <b id="shoppingAmount">
+                    ₹0
+                </b>
+
+            </div>
+
+
+            <div class="category">
+
+                <span>💡 Bills</span>
+
+                <div class="progress">
+                    <div id="billsBar"></div>
+                </div>
+
+                <b id="billsAmount">
+                    ₹0
+                </b>
+
+            </div>
+
+
+            <div class="category">
+
+                <span>📚 Education</span>
+
+                <div class="progress">
+                    <div id="educationBar"></div>
+                </div>
+
+                <b id="educationAmount">
+                    ₹0
+                </b>
+
+            </div>
+
+
+            <div class="category">
+
+                <span>📦 Other</span>
+
+                <div class="progress">
+                    <div id="otherBar"></div>
+                </div>
+
+                <b id="otherAmount">
+                    ₹0
+                </b>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+            Personal Expense Calculator © 2026
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
